@@ -9,7 +9,7 @@ Tags:
 ###Running the server
 While it is already a good idea to create a data directory to make server data persistent across container restarts, in the current version you cannot start the server without the data directory as you need to accept the EULA. Therefore, I recommend this method:
 
-`mkdir /data && echo "eula=true" > /data/eula.txt"`
+`mkdir /data && echo "eula=true" > /data/eula.txt`
 
 Then mount your new /data directory into the container, map the port, and start the container:
 
