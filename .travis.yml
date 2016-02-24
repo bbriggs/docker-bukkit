@@ -9,8 +9,15 @@ branches:
   only: 
     - craftbukkit
     - spigot
+    - master
 
 before_install:
-  - docker build -t bbriggs/bukkit:spigot-1.8.3 .
-  - sudo mkdir /data
-  - docker run -d -p 127.0.0.1:25565:25565 -v /data:/data -e EULA=true bbriggs/bukkit:spigot-1.8.3
+    - sudo mkdir /data
+
+install: 
+    - docker build -t bbriggs/bukkit:spigot-1.8.3 .
+    - docker run -it -e EULA=true -p 25565:25565 -v /data:/data bbriggs/bukki:spigot-1.8.3
+
+after_success:
+    - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+    - docker push bbriggs/bukkit:spigot-1.8.3
