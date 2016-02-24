@@ -16,7 +16,7 @@ before_install:
 
 install: 
     - docker build -t bbriggs/bukkit:spigot-1.8.3 .
-    - docker run -it -e EULA=true -p 25565:25565 -v /data:/data bbriggs/bukki:spigot-1.8.3
+    - docker run -it -e EULA=true -p 25565:25565 -v /data:/data bbriggs/bukkit:spigot-1.8.3
 
 after_success:
     - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
