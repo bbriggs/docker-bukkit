@@ -11,6 +11,6 @@ branches:
     - spigot
 
 before_install:
-  - docker build -t bbriggs/bukkit:1.8.3 .
+  - docker build -t bbriggs/bukkit:spigot-1.8.3 .
   - sudo mkdir /data
-  - docker run -d -p 127.0.0.1:25565:25565 -v /data:/data -e EULA=true bbriggs/docker:1.8.3
+  - docker run -d -p 127.0.0.1:25565:25565 -v /data:/data -e EULA=true bbriggs/bukkit:spigot-1.8.3
