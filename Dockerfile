@@ -20,8 +20,10 @@ MAINTAINER Bren Briggs <briggs.brenton@gmail.com>
 RUN apt-get update && apt-get install -y openjdk-7-jdk wget git
 RUN mkdir /minecraft-workspace /minecraft /data
 RUN wget -O /minecraft-workspace/BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
+
+# Capture only stderr to reduce log verbosity. 
 RUN cd /minecraft-workspace/ && java -jar BuildTools.jar --rev 1.8.3 2>&1 >/dev/null
-RUN mv /minecraft-workspace/craftbukkit-*.jar /minecraft && mv /minecraft-workspace/spigot-*.jar /minecraft
+RUN mv /minecraft-workspace/craftbukkit-*.jar /minecraft
 RUN rm -rf /minecraft-workspace
 EXPOSE 25565
 WORKDIR /data
