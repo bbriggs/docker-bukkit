@@ -15,4 +15,4 @@ if [ ! -f /data/eula.txt ]; then
   fi
 fi
 cd /data
-java -jar /minecraft/spigot-1.8.3.jar
+java -jar /minecraft/bukkit-1.8.3.jar
