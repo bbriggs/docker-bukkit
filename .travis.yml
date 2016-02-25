@@ -13,13 +13,10 @@ install:
     - docker build -t bbriggs/bukkit:1.8.3 .
     - docker build -t bbriggs/bukkit:latest .
 
+script:
+    - docker run -it -p 25565:25565 -v /data:/data -e EULA=true -e TRAVIS=true bbriggs/bukkit
+
 after_success:
     - docker login --username=$DOCKER_USERNAME --password=$DOCKER_PASSWORD --email=$DOCKER_EMAIL 
     - docker push bbriggs/bukkit:1.8.3
     - docker push bbriggs/bukkit:latest
-
-notifications:
-  irc:
-    channels:
-      - "ircs://irc.sithmail.com:6697/#minecraft"
-    use_notice: true

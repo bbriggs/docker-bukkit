@@ -10,9 +10,14 @@ if [ ! -f /data/eula.txt ]; then
     echo "  https://account.mojang.com/documents/minecraft_eula"
     echo "by adding the following immediately after 'docker run':"
     echo "  -e EULA=TRUE"
+    echo "or editing eula.txt to 'eula=true' in your server's data directory."
     echo ""
     exit 1
   fi
 fi
 cd /data
-java -jar /minecraft/craftbukkit-1.8.3.jar
+if [[ $TRAVIS=true ]]; then
+    echo "stop" | java -jar /minecraft/craftbukkit-1.8.3.jar
+else
+    java -jar /minecraft/craftbukkit-1.8.3.jar
+fi
