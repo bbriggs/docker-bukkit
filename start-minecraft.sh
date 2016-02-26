@@ -16,7 +16,7 @@ if [ ! -f /data/eula.txt ]; then
   fi
 fi
 cd /data
-if [[ $TRAVIS=true ]]; then
+if [[ $TRAVIS = true ]]; then
     echo "stop" | java -jar /minecraft/craftbukkit-1.8.jar
 else
     java -jar /minecraft/craftbukkit-1.8.jar
