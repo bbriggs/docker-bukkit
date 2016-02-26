@@ -8,6 +8,9 @@ services:
 branches:
   only: 
     - master
+    - 1.8.8
+    - 1.8.3
+    - 1.8
 
 install: 
     - docker build -t bbriggs/bukkit:latest .
