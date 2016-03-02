@@ -14,7 +14,7 @@ branches:
     - 1.8
 
 install: 
-    - docker build -t bbriggs/bukkit:1.8.8 .
+    - docker pull bbriggs/latest
     - docker build -t bbriggs/bukkit:latest .
 
 script:
@@ -22,5 +22,4 @@ script:
 
 after_success:
     - docker login --username=$DOCKER_USERNAME --password=$DOCKER_PASSWORD --email=$DOCKER_EMAIL 
-    - docker push bbriggs/bukkit:1.8.8
     - docker push bbriggs/bukkit:latest
