@@ -8,10 +8,7 @@ services:
 branches:
   only: 
     - master
-<<<<<<< HEAD
-=======
     - latest
->>>>>>> 6e46729... Add more branches to travis
     - 1.8.8
     - 1.8.3
     - 1.8
