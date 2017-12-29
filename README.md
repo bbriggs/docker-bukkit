@@ -19,7 +19,7 @@
 
 # Docker Bukkit
 
-A Bukkit/Spigot server on docker.
+A Docker Bukkit/Spigot server based on Alpine.
 
 ### Running the server
 
@@ -33,3 +33,9 @@ Yes, even though the repo's name is `bukkit`, we have included the lovely spigot
 
 `docker run -it -v /data:/data -p 25565:25565  -e EULA=true --name mc_server bbriggs/bukkit spigot` 
 
+### Running a specific version
+
+To run a specific version of Bukkit or Spigot, use a docker tag. 
+
+Example:
+`docker run -it -v /data:/data -p 25565:25565  -e EULA=true --name mc_server bbriggs/bukkit:1.9.4 spigot` 
