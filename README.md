@@ -3,17 +3,17 @@
 # Simple Tags
 
 `1.8` ([1.8/Dockerfile](1.8/Dockerfile))
-`1.8.3` ([1.8.3/Dockerfile](1.8.3/Dockerfile)
-`1.8.7` ([1.8.7/Dockerfile](1.8.7/Dockerfile)
-`1.8.8` ([1.8.8/Dockerfile](1.8.8/Dockerfile)
-`1.9` ([1.9/Dockerfile](1.9/Dockerfile)
-`1.9.2` ([1.9.2/Dockerfile](1.9.2/Dockerfile)
-`1.9.4` ([1.9.4/Dockerfile](1.9.4/Dockerfile)
-`1.10` ([1.10/Dockerfile](1.10/Dockerfile)
-`1.11` ([1.11/Dockerfile](1.11/Dockerfile)
-`1.12` ([1.12/Dockerfile](1.12/Dockerfile)
-`1.12.1`([1.12.1/Dockerfile](1.12.1/Dockerfile)
-`latest`([Dockerfile](Dockerfile)
+`1.8.3` ([1.8.3/Dockerfile](1.8.3/Dockerfile))
+`1.8.7` ([1.8.7/Dockerfile](1.8.7/Dockerfile))
+`1.8.8` ([1.8.8/Dockerfile](1.8.8/Dockerfile))
+`1.9` ([1.9/Dockerfile](1.9/Dockerfile))
+`1.9.2` ([1.9.2/Dockerfile](1.9.2/Dockerfile))
+`1.9.4` ([1.9.4/Dockerfile](1.9.4/Dockerfile))
+`1.10` ([1.10/Dockerfile](1.10/Dockerfile))
+`1.11` ([1.11/Dockerfile](1.11/Dockerfile))
+`1.12` ([1.12/Dockerfile](1.12/Dockerfile))
+`1.12.1`([1.12.1/Dockerfile](1.12.1/Dockerfile))
+`latest`([Dockerfile](Dockerfile))
 
 # Docker Bukkit
 ## A Bukkit/Spigot server on docker
