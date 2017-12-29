@@ -17,7 +17,7 @@ if [ ! -f /data/eula.txt ]; then
 fi
 cd /data
 if [[ "$TRAVIS" = true ]]; then
-    echo "stop" | java -jar /root/craftbukkit-1.8.3.jar
+    echo "stop" | java -jar /root/craftbukkit-1.8.7.jar
 else
-    java -jar /root/craftbukkit-1.8.3.jar
+    java -jar /root/craftbukkit-1.8.7.jar
 fi

@@ -30,5 +30,6 @@ COPY --from=builder /minecraft/craftbukkit-*.jar /root
 COPY --from=builder /minecraft/spigot-*.jar /root
 EXPOSE 25565
 WORKDIR /data
-ADD start-minecraft.sh /root/start-minecraft.sh
+ADD start-bukkit.sh /root/start-bukkit.sh
+ADD start-spigot.sh /root/start-spigot.sh
 CMD ["/bin/bash", "/root/start-bukkit.sh"]
