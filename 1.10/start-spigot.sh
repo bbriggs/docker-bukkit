@@ -17,7 +17,7 @@ if [ ! -f /data/eula.txt ]; then
 fi
 cd /data
 if [[ "$TRAVIS" = true ]]; then
-    echo "stop" | java -jar /root/spigot-1.9.jar
+    echo "stop" | java -jar /root/spigot-1.10.jar
 else
-    java -jar /root/spigot-1.9.jar
+    java -jar /root/spigot-1.10.jar
 fi
