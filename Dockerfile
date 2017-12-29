@@ -15,17 +15,20 @@
 #     with this program; if not, write to the Free Software Foundation, Inc.,
 #     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-FROM ubuntu:trusty
-MAINTAINER Bren Briggs <briggs.brenton@gmail.com>
-RUN apt-get update && apt-get install -y openjdk-7-jdk wget git
-RUN mkdir /minecraft-workspace /minecraft /data
-RUN wget -O /minecraft-workspace/BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
+FROM openjdk:8-alpine as builder
+WORKDIR /minecraft
+RUN apk update
+RUN apk --no-cache add wget git bash
+RUN wget -O /minecraft/BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
+RUN java -jar BuildTools.jar --rev 1.8  2>&1 /dev/null
 
-# Capture only stderr to reduce log verbosity. 
-RUN cd /minecraft-workspace/ && java -jar BuildTools.jar --rev latest 2>&1 >/dev/null
-RUN mv /minecraft-workspace/craftbukkit-*.jar /minecraft
-RUN rm -rf /minecraft-workspace
+FROM openjdk:8-alpine
+WORKDIR /root
+RUN apk update
+RUN apk --no-cache add bash
+COPY --from=builder /minecraft/craftbukkit-*.jar /root
+COPY --from=builder /minecraft/spigot-*.jar /root
 EXPOSE 25565
 WORKDIR /data
 ADD start-minecraft.sh /root/start-minecraft.sh
-ENTRYPOINT ["/bin/bash", "/root/start-minecraft.sh"]
+CMD ["/bin/bash", "/root/start-bukkit.sh"]
