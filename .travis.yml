@@ -8,18 +8,9 @@ services:
 branches:
   only: 
     - master
-    - latest
-    - 1.8.8
-    - 1.8.3
-    - 1.8
 
 install: 
-    - docker pull bbriggs/bukkit:latest
-    - docker build -t bbriggs/bukkit:latest .
+    - docker build -t bukkit .
 
 script:
-    - docker run -it -p 25565:25565 -v /data:/data -e EULA=true -e TRAVIS=true bbriggs/bukkit
-
-after_success:
-    - docker login --username=$DOCKER_USERNAME --password=$DOCKER_PASSWORD --email=$DOCKER_EMAIL 
-    - docker push bbriggs/bukkit:latest
+    - docker run -it -p 25565:25565 -v /data:/data -e EULA=true -e TRAVIS=true bukkit
