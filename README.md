@@ -1,5 +1,7 @@
 ### Supported tags and respective `Dockerfile` links
 
+[![Build Status](https://api.travis-ci.org/bbriggs/docker-bukkit.svg?branch=master)](https://travis-ci.org/bbriggs/docker-bukkit)
+
 # Simple Tags
 
 `1.8` ([1.8/Dockerfile](1.8/Dockerfile))
