@@ -20,7 +20,7 @@ WORKDIR /minecraft
 RUN apk update
 RUN apk --no-cache add wget git bash
 RUN wget -O /minecraft/BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
-RUN java -jar BuildTools.jar --rev 1.10 2>&1 /dev/null
+RUN java -jar BuildTools.jar --rev 1.10  2>&1 /dev/null
 
 FROM openjdk:8-alpine
 WORKDIR /root
@@ -30,6 +30,6 @@ COPY --from=builder /minecraft/craftbukkit-*.jar /root
 COPY --from=builder /minecraft/spigot-*.jar /root
 EXPOSE 25565
 WORKDIR /data
-ADD start-bukkit.sh /root/start-bukkit.sh
-ADD start-spigot.sh /root/start-spigot.sh
-CMD ["/bin/bash", "/root/start-bukkit.sh"]
+ADD entrypoint.sh /root/entrypoint.sh
+ENTRYPOINT ["/root/entrypoint.sh"]
+CMD ["craftbukkit"]

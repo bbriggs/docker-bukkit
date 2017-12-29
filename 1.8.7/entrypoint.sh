@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #Solution borrowed from https://github.com/itzg/dockerfiles/blob/master/minecraft-server/start-minecraft.sh
 if [ ! -f /data/eula.txt ]; then
   if [ "$EULA" != "" ]; then
@@ -17,7 +18,7 @@ if [ ! -f /data/eula.txt ]; then
 fi
 cd /data
 if [[ "$TRAVIS" = true ]]; then
-    echo "stop" | java -jar /root/craftbukkit-1.12.1.jar
+    echo "stop" | java -jar /root/$1-1.8.7.jar
 else
-    java -jar /root/craftbukkit-1.12.1.jar
+    java -jar /root/$1-1.8.7.jar
 fi
