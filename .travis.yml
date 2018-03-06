@@ -5,12 +5,27 @@ language: bash
 services:
  - docker
 
+env:
+  - TAG=1.8
+  - TAG=1.8.3
+  - TAG=1.8.7
+  - TAG=1.8.8
+  - TAG=1.9
+  - TAG=1.9.2
+  - TAG=1.9.4
+  - TAG=1.10
+  - TAG=1.11
+  - TAG=1.12
+  - TAG=1.12.1
+  - TAG=1.12.2
+  - TAG=latest
+
 branches:
   only: 
     - master
 
 install: 
-    - docker build -t bukkit .
+    - docker pull bbriggs/bukkit
 
 script:
-    - docker run -it -p 25565:25565 -v /data:/data -e EULA=true -e TRAVIS=true bukkit
+  - ./test.sh
