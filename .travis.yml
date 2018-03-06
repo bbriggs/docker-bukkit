@@ -8,12 +8,12 @@ services:
 env:
   - TAG=1.8
   - TAG=1.8.3
-  - TAG=1.8.7
+# - TAG=1.8.7
   - TAG=1.8.8
   - TAG=1.9
   - TAG=1.9.2
   - TAG=1.9.4
-  - TAG=1.10
+  - TAG=1.10.2
   - TAG=1.11
   - TAG=1.12
   - TAG=1.12.1
