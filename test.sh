@@ -2,8 +2,6 @@
 
 set -e
 
-docker build .
-
 cd $TAG && docker build -t bukkit && docker run -it -p 25565:25565 -v /data:/data -e EULA=true -e TRAVIS=true bukkit
 # Build all the versions sequentially. Pack a lunch, this takes a while.
 #cd ./1.8 && docker build -t bukkit . && docker run -it -p 25565:25565 -v /data:/data -e EULA=true -e TRAVIS=true bukkit && cd ..
