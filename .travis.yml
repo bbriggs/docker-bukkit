@@ -20,10 +20,6 @@ env:
   - TAG=1.12.2
   - TAG=latest
 
-branches:
-  only: 
-    - master
-
 install: 
     - docker pull bbriggs/bukkit
 
