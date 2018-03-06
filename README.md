@@ -15,6 +15,7 @@
 `1.11` ([1.11/Dockerfile](1.11/Dockerfile))
 `1.12` ([1.12/Dockerfile](1.12/Dockerfile))
 `1.12.1`([1.12.1/Dockerfile](1.12.1/Dockerfile))
+`1.12.2`([1.12.2/Dockerfile](1.12.2/Dockerfile))
 `latest`([Dockerfile](Dockerfile))
 
 # Docker Bukkit
