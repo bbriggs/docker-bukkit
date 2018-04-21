@@ -20,5 +20,6 @@ cd /data
 if [[ "$TRAVIS" = true ]]; then
     echo "stop" | java -jar /root/$1-1.10.2.jar
 else
+    [ ! -f /data/server.properties ] && python3 /root/configure.py
     java -jar /root/$1-1.10.2.jar
 fi
