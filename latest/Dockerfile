@@ -37,6 +37,6 @@ COPY --from=builder /minecraft/spigot-*.jar /root
 EXPOSE 25565
 WORKDIR /data
 ADD entrypoint.sh /root/entrypoint.sh
-ADD properties.py /root/properties.py
+ADD properties.py /root/configure.py
 ENTRYPOINT ["/root/entrypoint.sh"]
 CMD ["craftbukkit"]
