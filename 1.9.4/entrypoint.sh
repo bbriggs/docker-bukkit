@@ -20,5 +20,6 @@ cd /data
 if [[ "$TRAVIS" = true ]]; then
     echo "stop" | java -jar /root/$1-1.9.4.jar
 else
+    [ ! -f /data/server.properties ] || [ "${FORCE_CONFIG}" = "true" ] && python3 /root/configure.py
     java -jar /root/$1-1.9.4.jar
 fi
