@@ -20,7 +20,7 @@
 | `1.12.2` | [1.12.2/Dockerfile](1.12.2/Dockerfile) |       |
 | `1.13`   | [1.13/Dockerfile](1.13/Dockerfile)     |       |
 | `1.13.1` | [1.13.1/Dockerfile](1.13.1/Dockerfile) |       |
-| `1.13.2` | [1.13.2/Dockerfile](1.13.1/Dockerfile) |       |
+| `1.13.2` | [1.13.2/Dockerfile](1.13.2/Dockerfile) |       |
 | `latest` | [latest/Dockerfile](latest/Dockerfile) |       |
 
 # Docker Bukkit
