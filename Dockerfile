@@ -16,7 +16,7 @@
 #     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 FROM openjdk:8-alpine as builder
-ARG VER
+ARG BUKKIT_VERSION
 WORKDIR /minecraft
 RUN apk update
 RUN apk --no-cache add wget git bash
