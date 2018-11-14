@@ -1,0 +1,6 @@
+#! /bin/bash
+
+for VER in 1.8 1.8.3 1.8.7 1.8.8 1.9 1.9.2 1.9.4 1.10 1.10.2 1.11 1.12 1.12.1 1.12.2 1.13 1.13.1 1.13.2 
+do
+	docker build --build-arg BUKKIT_VERSION=$VER -f $DOCKERFILE_PATH -t $DOCKER_REPO:$VER .
+done
