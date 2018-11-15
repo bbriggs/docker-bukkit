@@ -8,7 +8,7 @@ services:
 stages:
   - compile
   - test
-  - deploy
+  - push
 
 env:
   - TAG=1.8
@@ -36,5 +36,5 @@ compile:
 test:
   - docker run -it -p 25565:25565 -v /data:/data -e EULA=true -e TRAVIS=true bbriggs/bukkit:$TAG
 
-deploy:
+push:
   - docker push bbriggs/bukkit:$TAG
