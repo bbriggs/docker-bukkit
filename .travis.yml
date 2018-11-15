@@ -5,6 +5,11 @@ language: bash
 services:
  - docker
 
+stages:
+  - compile
+  - test
+  - deploy
+
 env:
   - TAG=1.8
   - TAG=1.8.3
@@ -22,8 +27,14 @@ env:
   - TAG=1.13.2
   - TAG=latest
 
-install: 
-    - docker pull bbriggs/bukkit
+install:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
-script:
-  - ./test.sh
+compile:
+  - docker build --build-arg BUKKIT_VERSION=$TAG -t bbriggs/bukkit:$TAG .
+
+test:
+  - docker run -it -p 25565:25565 -v /data:/data -e EULA=true -e TRAVIS=true bbriggs/bukkit:$TAG
+
+deploy:
+  - docker push bbriggs/bukkit:$TAG
