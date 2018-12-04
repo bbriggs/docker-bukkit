@@ -33,6 +33,10 @@ To start the server and accept the EULA in one fell swoop, just pass the `EULA=t
 
 `docker run -it -v /data:/data -p 25565:25565  -e EULA=true --name mc_server bbriggs/bukkit` 
 
+To run in the background (recommended), add the `-d` flag.
+
+**NOTE**: At this point in time, the `-it` flags are **_strongly recommended_** as without them, the server appears to try to hog 100% of the CPU. We are working on a solution.
+
 ### Spigot included
 
 Yes, even though the repo's name is `bukkit`, we have included the lovely spigot server as well. To run the spigot server, supply it as an argument like so:
