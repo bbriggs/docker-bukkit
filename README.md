@@ -21,7 +21,8 @@
 | `1.13`   |       |
 | `1.13.1` |       |
 | `1.13.2` |       |
-| `latest` | Builds the default ref from [GetBukkit](https://getbukkit.org/) (1.12.2 at the time of this writing) |
+| `1.14.4` |       |
+| `latest` | Build the latest Spigot jar (1.14.4 at the time of this writing) |
 
 # Docker Bukkit
 
