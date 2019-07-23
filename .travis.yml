@@ -25,6 +25,11 @@ env:
   - TAG=1.12.2
   - TAG=1.13.1
   - TAG=1.13.2
+  - TAG=1.14
+  - TAG=1.14.1
+  - TAG=1.14.2
+  - TAG=1.14.3
+  - TAG=1.14.4
   - TAG=latest
 
 install:
@@ -33,8 +38,4 @@ install:
 script:
   - docker build --build-arg BUKKIT_VERSION=$TAG -t bbriggs/bukkit:$TAG .
   - docker run -it -p 25565:25565 -v /data:/data -e EULA=true -e TRAVIS=true bbriggs/bukkit:$TAG
-  - docker push bbriggs/bukkit:$TAG
-
-branches:
-  only:
-  - master
+  - [[ "$TRAVIS_BRANCH" == "master" ]] && docker push bbriggs/bukkit:$TAG
