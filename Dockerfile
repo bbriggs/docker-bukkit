@@ -19,6 +19,7 @@ FROM openjdk:8-alpine as builder
 ARG BUKKIT_VERSION=1.13.2
 LABEL stage=builder
 LABEL build=$BUILD_ID
+
 WORKDIR /minecraft
 RUN echo $BUKKIT_VERSION
 RUN apk update
