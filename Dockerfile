@@ -16,7 +16,7 @@
 #     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 FROM openjdk:8-alpine as builder
-ARG BUKKIT_VERSION=1.13.2
+ARG BUKKIT_VERSION=1.14.4
 LABEL stage=builder
 LABEL build=$BUILD_ID
 
@@ -38,6 +38,7 @@ RUN apk add --no-cache python3 bash && \
     if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi && \
     rm -r /root/.cache
 WORKDIR /root
+COPY --from=builder /minecraft/craftbukkit-*.jar /root/craftbukkit.jar
 COPY --from=builder /minecraft/spigot-*.jar /root/spigot.jar
 EXPOSE 25565
 WORKDIR /data
