@@ -20,11 +20,11 @@ env:
   - TAG=1.12.2
   - TAG=1.13.1
   - TAG=1.13.2
-  - TAG=1.14
-  - TAG=1.14.1
-  - TAG=1.14.2
-  - TAG=1.14.3
-  - TAG=1.14.4
+  - TAG=1.14 DOCKERFILE=Dockerfile-1.14
+  - TAG=1.14.1 DOCKERFILE=Dockerfile-1.14
+  - TAG=1.14.2 DOCKERFILE=Dockerfile-1.14
+  - TAG=1.14.3 DOCKERFILE=Dockerfile-1.14
+  - TAG=1.14.4 DOCKERFILE=Dockerfile-1.14
   - TAG=latest
 
 install:
