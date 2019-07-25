@@ -38,11 +38,10 @@ RUN apk add --no-cache python3 bash && \
     if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi && \
     rm -r /root/.cache
 WORKDIR /root
-COPY --from=builder /minecraft/craftbukkit-*.jar /root/craftbukkit.jar
 COPY --from=builder /minecraft/spigot-*.jar /root/spigot.jar
 EXPOSE 25565
 WORKDIR /data
 ADD entrypoint.sh /root/entrypoint.sh
 ADD configure.py /root/configure.py
 ENTRYPOINT ["/root/entrypoint.sh"]
-CMD ["craftbukkit"]
+CMD ["spigot"]
