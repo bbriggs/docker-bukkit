@@ -31,3 +31,5 @@ if [ $TAG = "latest" ]; then
 else
 	build_tag
 fi
+
+test
