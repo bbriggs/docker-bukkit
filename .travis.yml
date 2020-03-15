@@ -27,10 +27,8 @@ env:
   - TAG=1.14.4 DOCKERFILE=Dockerfile-1.14
   - TAG=1.15 DOCKERFILE=Dockerfile-1.14
   - TAG=1.15.1 DOCKERFILE=Dockerfile-1.14
+  - TAG=1.15.2 DOCKERFILE=Dockerfile-1.14
   - TAG=latest
-
-install:
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 script:
   - ./travis-build.sh

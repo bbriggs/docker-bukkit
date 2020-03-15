@@ -2,6 +2,22 @@
 
 set -xe
 
+docker_login () {
+	if [[ "$TRAVIS_BRANCH" ]] = "master"; then
+		echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+	else
+		echo "Build is not on master branch. Skipping login."
+	fi
+}
+
+push () {
+	if [[ "$TRAVIS_BRANCH" = "master" ]]; then
+		docker push bbriggs/bukkit:$TAG
+	else
+		echo "Build is not on master branch. Skipping login."
+	fi
+}
+
 build_latest () {
 	docker build -f Dockerfile-1.14 -t bbriggs/bukkit:latest .
 }
@@ -16,15 +32,9 @@ build_tag () {
 }
 
 test () {
-	# Test
 	docker run -it -p 25565:25565 -v /data:/data -e EULA=true -e TRAVIS=true bbriggs/bukkit:$TAG
-
-	if [[ "$TRAVIS_BRANCH" = "master" ]]; then
-		docker push bbriggs/bukkit:$TAG
-	else
-		exit 0
-	fi
 }
+
 
 if [ $TAG = "latest" ]; then
 	build_latest
@@ -32,4 +42,8 @@ else
 	build_tag
 fi
 
+docker_login
+
 test
+
+push
