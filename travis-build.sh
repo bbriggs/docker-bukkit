@@ -3,7 +3,7 @@
 set -xe
 
 docker_login () {
-	if [[ "$TRAVIS_BRANCH" ]] = "master"; then
+	if [[ "$TRAVIS_BRANCH" = "master" ]] ; then
 		echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 	else
 		echo "Build is not on master branch. Skipping login."
