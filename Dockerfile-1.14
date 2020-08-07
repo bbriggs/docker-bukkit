@@ -15,7 +15,7 @@
 #     with this program; if not, write to the Free Software Foundation, Inc.,
 #     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-FROM openjdk:8-alpine as builder
+FROM adoptopenjdk/openjdk8:alpine as builder
 ARG BUKKIT_VERSION=1.16.1
 LABEL stage=builder
 LABEL build=$BUILD_ID
@@ -28,7 +28,7 @@ RUN wget -O /minecraft/BuildTools.jar https://hub.spigotmc.org/jenkins/job/Build
 CMD git config --global --unset core.autocrlf
 RUN java -jar BuildTools.jar --rev $BUKKIT_VERSION  2>&1 /dev/null
 
-FROM openjdk:8-alpine
+FROM adoptopenjdk/openjdk8:alpine
 # frolvlad/alpine-python3
 RUN apk add --no-cache python3 bash && \
     python3 -m ensurepip && \
