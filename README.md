@@ -28,7 +28,9 @@
 | `1.14.4` |       |
 | `1.15`   |       |
 | `1.15.1` |       |
-| `latest` | Build the latest Spigot jar (1.15.1 at the time of this writing) |
+| `1.15.2` |       |
+| `1.16.1` | 1.16 is not supported by spigot as 1.16.1 was released so quickly after it. |
+| `latest` | Build the latest Spigot jar (1.16.1 at the time of this writing) |
 
 # Docker Bukkit
 
