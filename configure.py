@@ -44,7 +44,23 @@ class Config:
             "spawn-monsters": os.getenv("SPAWN_MONSTERS", "true"),
             "view-distance": os.getenv("VIEW_DISTANCE", 10),
             "generate-structures": os.getenv("GENERATE_STRUCTURES", "true"),
-            "motd": os.getenv("MOTD", "A Minecraft server powered by Docker (image: bbriggs/bukkit)")
+            "motd": os.getenv("MOTD", "A Minecraft server powered by Docker (image: bbriggs/bukkit)"),
+            "enable-jmx-monitoring": os.getenv("ENABLE_JMX_MONITORING", "false"),
+            "rcon.port": os.getenv("RCON_PORT", 25575),
+            "query.port": os.getenv("QUERY_PORT", 25565),
+            "use-native-transport": os.getenv("USE_NATIVE_TRANSPORT", "true"),
+            "enable-status": os.getenv("ENABLE_STATUS", "true"),
+            "broadcast-rcon-to-ops": os.getenv("BROADCAST_RCON_TO_OPS", "true"),
+            "sync-chunk-writes": os.getenv("SYNC_CHUNK_WRITES", "true"),
+            "op-permission-level": os.getenv("OP_PERMISSION_LEVEL", 4),
+            "entity-broadcast-range-percentage": os.getenv("ENTITY_BROADCAST_RANGE_PERCENTAGE", 100),
+            "rcon.password": os.getenv("RCON_PASSWORD", ""),
+            "rate-limit": os.getenv("RATE_LIMIT", 0),
+            "broadcast-console-to-ops": os.getenv("BROADCAST_CONSOLE_TO_OPS", "true"),
+            "function-permission-level": os.getenv("FUNCTION_PERMISSION_LEVEL", 2),
+            "enforce-whitelist": os.getenv("ENFORCE_WHITELIST", "false"),
+            "resource-pack-sha1": os.getenv("RESOURCE_PACK_SHA1", ""),
+            "spawn-protection": os.getenv("SPAWN_PROTECTION", 16)
         }
         return props
 

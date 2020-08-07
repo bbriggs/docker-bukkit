@@ -115,6 +115,22 @@ A full list of `server.properties` settings and their corresponding environment 
 | spawn-npcs                    | SPAWN_NPCS                    | `true`                                                           |
 | view-distance                 | VIEW_DISTANCE                 | `10`                                                             |
 | white-list                    | WHITE_LIST                    | `false`                                                          |
+| enable-jmx-monitoring         | ENABLE_JMX_MONITORING         | `false`                                                          |
+| rcon.port                     | RCON_PORT                     | `25575`                                                          |
+| query.port                    | QUERY_PORT                    | `25565`                                                          |
+| use-native-transport          | USE_NATIVE_TRANSPORT          | `true`                                                           |
+| enable-status                 | ENABLE_STATUS                 | `true`                                                           |
+| broadcast-rcon-to-ops         | BROADCAST_RCON_TO_OPS         | `true`                                                           |
+| sync-chunk-writes             | SYNC_CHUNK_WRITES             | `true`                                                           |
+| op-permission-level           | OP_PERMISSION_LEVEL           | `4`                                                              |
+| entity-broadcast-range-percentage | ENTITY_BROADCAST_RANGE_PERCENTAGE | `100`                                                    |
+| rcon.password                 | RCON_PASSWORD                 | ` `                                                              |
+| rate-limit                    | RATE_LIMIT                    | `0`                                                              |
+| broadcast-console-to-ops      | BROADCAST_CONSOLE_TO_OPS      | `true`                                                           |
+| function-permission-level     | FUNCTION_PERMISSION_LEVEL     | `2`                                                              |
+| enforce-whitelist             | ENFORCE_WHITELIST             | `false`                                                          |
+| resource-pack-sha1            | RESOURCE_PACK_SHA1            | ` `                                                              |
+| spawn-protection              | SPAWN_PROTECTION              | `16`                                                             |
 
 
 ### Running a specific version
