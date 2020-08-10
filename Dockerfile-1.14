@@ -43,5 +43,7 @@ EXPOSE 25565
 WORKDIR /data
 ADD entrypoint.sh /root/entrypoint.sh
 ADD configure.py /root/configure.py
+ENV InitRAM=1g
+ENV MaxRAM=2g
 ENTRYPOINT ["/root/entrypoint.sh"]
 CMD ["spigot"]

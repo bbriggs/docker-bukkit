@@ -46,6 +46,12 @@ To run in the background (recommended), add the `-d` flag.
 
 **NOTE**: At this point in time, the `-it` flags are **_strongly recommended_** as without them, the server appears to try to hog 100% of the CPU. We are working on a solution.
 
+### Java Memory
+
+To help control memory usage we have `InitRAM` and `MaxRAM` enviornmenent variables. These variables are set to `1g` and `2g` respectively by default. These variables map to `-Xms` and `-Xmx`. 
+
+If you wish to support more players and plugins, it is highly encourage to increase these variables. You can find more information here: https://minecraft.gamepedia.com/Server/Requirements/Dedicated
+
 ### Spigot included
 
 Yes, even though the repo's name is `bukkit`, we have included the lovely spigot server as well. To run the spigot server, supply it as an argument like so:
