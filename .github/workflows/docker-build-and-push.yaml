@@ -1,0 +1,472 @@
+name: Build and Push to Dockerhub
+on:
+  push:
+    branches:
+      - master
+  cron:  '0 0 * * 1'  # Build Every monday at 00:00
+env: # Fallbacks
+  TAG="latest"
+  DOCKERFILE="Dockerfile-1.14"
+jobs:
+  latest:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.8:
+    env:
+      TAG=1.8
+      DOCKERFILE="Dockerfile"
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.8.3:
+    env:
+      TAG=1.8.3
+      DOCKERFILE="Dockerfile"
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.8.7:
+    env:
+      TAG=1.8.7
+      DOCKERFILE="Dockerfile"
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.8.8:
+    env:
+      TAG=1.8.8
+      DOCKERFILE="Dockerfile"
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.9:
+    env:
+      TAG=1.9
+      DOCKERFILE="Dockerfile"
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.9.2:
+    env:
+      TAG=1.9.2
+      DOCKERFILE="Dockerfile"
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.9.4:
+    env:
+      TAG=1.9.4
+      DOCKERFILE="Dockerfile"
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.10.2:
+    env:
+      TAG=1.10.2
+      DOCKERFILE="Dockerfile"
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.11:
+    env:
+      TAG=1.11
+      DOCKERFILE="Dockerfile"
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.12:
+    env:
+      TAG=1.12
+      DOCKERFILE="Dockerfile"
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.12.1:
+    env:
+      TAG=1.12.1
+      DOCKERFILE="Dockerfile"
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.12.2:
+    env:
+      TAG=1.12.2
+      DOCKERFILE="Dockerfile"
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.13.1:
+    env:
+      TAG=1.13.1
+      DOCKERFILE="Dockerfile"
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.13.2:
+    env:
+      TAG=1.13.2
+      DOCKERFILE="Dockerfile"
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.14:
+    env:
+      TAG=1.14
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.14.1:
+    env:
+      TAG=1.14.1
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.14.2:
+    env:
+      TAG=1.14.2
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.14.3:
+    env:
+      TAG=1.14.3
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.14.4:
+    env:
+      TAG=1.14.4
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.15:
+    env:
+      TAG=1.15
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.15.1:
+    env:
+      TAG=1.15.1
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.15.2:
+    env:
+      TAG=1.15.2
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.16.1:
+    env:
+      TAG=1.16.1
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
+  1.16.2:
+    env:
+      TAG=1.16.2
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file $DOCKERFILE --tag $TAG
+        env:
+          TAG: latest
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: bbriggs/bukkit
+          tags: $TAG
