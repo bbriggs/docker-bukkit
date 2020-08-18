@@ -1,4 +1,4 @@
-name: Build and Push to Dockerhub
+name: PR Build
 on:
   pull_request:
 env: # Fallbacks
