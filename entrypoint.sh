@@ -21,5 +21,5 @@ if [[ "$TRAVIS" = true ]]; then
     echo "stop" | java -jar /root/$1.jar
 else
     [ ! -f /data/server.properties ] || [ "${FORCE_CONFIG}" = "true" ] && python3 /root/configure.py
-    java -Xmx$MaxRAM -Xms$InitRAM -jar /root/$1.jar
+    exec java -Xmx$MaxRAM -Xms$InitRAM -jar /root/$1.jar
 fi
