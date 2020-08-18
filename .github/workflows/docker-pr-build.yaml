@@ -21,7 +21,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.8:
+  v1-8:
     env:
       TAG: 1.8
       DOCKERFILE: "Dockerfile"
@@ -37,7 +37,7 @@ jobs:
         repository: bbriggs/bukkit
         tags: $TAG
         push: false
-  1.8.3:
+  v1-8-3:
     env:
       TAG: 1.8.3
       DOCKERFILE: "Dockerfile"
@@ -54,7 +54,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.8.7:
+  v1-8-7:
     env:
       TAG: 1.8.7
       DOCKERFILE: "Dockerfile"
@@ -71,7 +71,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.8.8:
+  v1-8-8:
     env:
       TAG: 1.8.8
       DOCKERFILE: "Dockerfile"
@@ -88,7 +88,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.9:
+  v1-9:
     env:
       TAG: 1.9
       DOCKERFILE: "Dockerfile"
@@ -105,7 +105,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.9.2:
+  v1-9-2:
     env:
       TAG: 1.9.2
       DOCKERFILE: "Dockerfile"
@@ -122,7 +122,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.9.4:
+  v1-9-4:
     env:
       TAG: 1.9.4
       DOCKERFILE: "Dockerfile"
@@ -139,7 +139,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.10.2:
+  v1-10-2:
     env:
       TAG: 1.10.2
       DOCKERFILE: "Dockerfile"
@@ -156,7 +156,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.11:
+  v1-11:
     env:
       TAG: 1.11
       DOCKERFILE: "Dockerfile"
@@ -173,7 +173,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.12:
+  v1-12:
     env:
       TAG: 1.12
       DOCKERFILE: "Dockerfile"
@@ -190,7 +190,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.12.1:
+  v1-12-1:
     env:
       TAG: 1.12.1
       DOCKERFILE: "Dockerfile"
@@ -207,7 +207,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.12.2:
+  v1-12-2:
     env:
       TAG: 1.12.2
       DOCKERFILE: "Dockerfile"
@@ -224,7 +224,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.13.1:
+  v1-13-1:
     env:
       TAG: 1.13.1
       DOCKERFILE: "Dockerfile"
@@ -241,7 +241,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.13.2:
+  v1-13-2:
     env:
       TAG: 1.13.2
       DOCKERFILE: "Dockerfile"
@@ -258,7 +258,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.14:
+  v1-14:
     env:
       TAG: 1.14
     runs-on: ubuntu-latest
@@ -274,7 +274,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.14.1:
+  v1-14-1:
     env:
       TAG: 1.14.1
     runs-on: ubuntu-latest
@@ -290,7 +290,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.14.2:
+  v1-14-2:
     env:
       TAG: 1.14.2
     runs-on: ubuntu-latest
@@ -306,7 +306,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.14.3:
+  v1-14-3:
     env:
       TAG: 1.14.3
     runs-on: ubuntu-latest
@@ -322,7 +322,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.14.4:
+  v1-14-4:
     env:
       TAG: 1.14.4
     runs-on: ubuntu-latest
@@ -338,7 +338,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.15:
+  v1-15:
     env:
       TAG: 1.15
     runs-on: ubuntu-latest
@@ -354,7 +354,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.15.1:
+  v1-15-1:
     env:
       TAG: 1.15.1
     runs-on: ubuntu-latest
@@ -386,7 +386,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.16.1:
+  v1-16-1:
     env:
       TAG: 1.16.1
     runs-on: ubuntu-latest
