@@ -370,7 +370,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.15.2:
+  v1-15-2:
     env:
       TAG: 1.15.2
     runs-on: ubuntu-latest
@@ -402,7 +402,7 @@ jobs:
           repository: bbriggs/bukkit
           tags: $TAG
           push: false
-  1.16.2:
+  v1-16-2:
     env:
       TAG: 1.16.2
     runs-on: ubuntu-latest
