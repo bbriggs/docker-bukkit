@@ -3,14 +3,12 @@ on:
   push:
     branches:
       - master
-  cron:  '0 0 * * 1'  # Build Every monday at 00:00
 env: # Fallbacks
-  TAG="latest"
-  DOCKERFILE="Dockerfile-1.14"
+  TAG: "latest"
+  DOCKERFILE: "Dockerfile-1.14"
 jobs:
   latest:
-    build:
-      runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
       steps:
       - uses: actions/checkout@v2
       - name: Build the Docker image
