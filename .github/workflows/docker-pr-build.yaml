@@ -16,7 +16,7 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -32,7 +32,7 @@ jobs:
       run: docker build . --file $DOCKERFILE --tag $TAG
     - uses: docker/build-push-action@v1
       with:
-        username: ${{ secrets.DOCKER_USERNAME }}
+        username: bbriggs
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: bbriggs/bukkit
         tags: $TAG
@@ -49,7 +49,7 @@ jobs:
     - name: Build and push Docker images
       uses: docker/build-push-action@v1
       with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -66,7 +66,7 @@ jobs:
     - name: Build and push Docker images
       uses: docker/build-push-action@v1
       with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -83,7 +83,7 @@ jobs:
     - name: Build and push Docker images
       uses: docker/build-push-action@v1
       with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -100,7 +100,7 @@ jobs:
     - name: Build and push Docker images
       uses: docker/build-push-action@v1
       with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -117,7 +117,7 @@ jobs:
     - name: Build and push Docker images
       uses: docker/build-push-action@v1
       with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -134,7 +134,7 @@ jobs:
     - name: Build and push Docker images
       uses: docker/build-push-action@v1
       with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -151,7 +151,7 @@ jobs:
     - name: Build and push Docker images
       uses: docker/build-push-action@v1
       with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -168,7 +168,7 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -185,7 +185,7 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -202,7 +202,7 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -219,7 +219,7 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -236,7 +236,7 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -253,7 +253,7 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -269,7 +269,7 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -285,7 +285,7 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -301,7 +301,7 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -317,7 +317,7 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -333,7 +333,7 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -349,7 +349,7 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -365,7 +365,7 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -381,7 +381,7 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -397,7 +397,7 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
@@ -413,7 +413,7 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: bbriggs
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: bbriggs/bukkit
           tags: $TAG
