@@ -24,7 +24,6 @@ jobs:
   v1-8:
     env:
       TAG: 1.8
-      BUKKIT_VERSION: 1.8
       DOCKERFILE: "Dockerfile"
     runs-on: ubuntu-latest
     steps:
@@ -37,6 +36,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: bbriggs/bukkit
         tags: 1.8
+        build_args: BUKKIT_VERSION=1.8
         push: false
   v1-8-3:
     env:
