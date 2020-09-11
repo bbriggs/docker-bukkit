@@ -7,6 +7,9 @@
 |----------|-------|
 | `1.8`    |       |
 | `1.8.3`  |       |
+| `1.8.4`  |       |
+| `1.8.5`  |       |
+| `1.8.6`  |       |
 | `1.8.7`  | Tag seems to have disppeared from the upstream. This project will no longer build it, but it will remain active for historical purposes. |
 | `1.8.8`  |       |
 | `1.9`    |       |
@@ -15,6 +18,8 @@
 | `1.10`   | Tag seems to have disppeared from the upstream. This project will no longer build it, but it will remain active for historical purposes. |
 | `1.10.2` |       |
 | `1.11`   |       |
+| `1.11.1`   |       |
+| `1.11.2`   |       |
 | `1.12`   |       |
 | `1.12.1` |       |
 | `1.12.2` |       |
