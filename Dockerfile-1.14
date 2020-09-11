@@ -16,7 +16,7 @@
 #     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 FROM adoptopenjdk/openjdk8:alpine as builder
-ARG BUKKIT_VERSION=1.16.2
+ARG BUKKIT_VERSION=1.16.3
 LABEL stage=builder
 LABEL build=$BUILD_ID
 
