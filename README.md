@@ -1,3 +1,9 @@
+# NOTICE: THIS REPO IS DEPRECATED.
+
+tl;dr: All new work and issues should be sent to [cmunroe's fork](https://gitlab.com/cmunroe/docker-bukkit/-/tree/master).
+
+It's been a lot of fun working on this off and on over the past few years, but this repo was really only ever intended to be an experiment in automating releases and continuous updates for a docker image. Thanks to everyone who has downloaded, opened issues, forked, starred, or otherwise contributed. This project was already somewhat poorly maintained and it's time for me to acknowledge that and hand the reins over to someone much more active.
+
 ### Supported tags and respective `Dockerfile` links
 
 [![Build Status](https://api.travis-ci.org/bbriggs/docker-bukkit.svg?branch=master)](https://travis-ci.org/bbriggs/docker-bukkit)
